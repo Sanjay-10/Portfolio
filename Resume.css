@@ -16,6 +16,11 @@
     font-weight: bolder ;
 }
 
+.intern{
+    font-size: medium;
+    font-weight: 600;
+}
+
 .university{
     color: white;
     font-weight: 500;
@@ -30,7 +35,7 @@
 }
 
 .info{
-    padding-top: 10%;
+    padding-top: 100px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -60,7 +65,6 @@
     border-bottom:solid;
     border-width: .05rem;
     border-color: #4B5260;
-
 }
 
 .resume-body{
@@ -105,9 +109,24 @@
     background-color: #161D29;
     align-content: center;
 }
-.icon:hover{
+
+
+.gmail:hover{
     transition-duration:1.5s;
-    color: rgb(19, 251, 123);
+    color: #E1594D;
+}
+
+.instagram:hover{
+    transition-duration:1.5s;
+    color: #FF0A5E;
+}
+.github:hover{
+    transition-duration:1.5s;
+    color: white;
+}
+.linkedin:hover{
+    transition-duration:1.5s;
+    color: #3989b4;
 }
 
 .container
@@ -182,10 +201,6 @@
     margin: 0 2rem;
 }
 
-.section-l{
-    padding: .5rem 2rem;
-}
-
 .section-r{
     padding: 0.5rem 0rem;
 }
@@ -251,8 +266,6 @@
     background: rgba(0, 0, 0, .15);
     font-size: 1.125rem;
     color: #d7dde9;
-    
-    
 }
 
 .title{
@@ -291,15 +304,11 @@
 
 
 /* Tablets */
-@media (max-width: 850px) {
+@media (max-width: 991px) {
     .resume-body {
         width: 80%;
-        
     }
 
-    .resume-page{
-       
-    }
     .name-heading {
         font-size: 28px;
         letter-spacing: 6px;
@@ -323,6 +332,17 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .extra-curricular{
+        border-bottom:solid  ;
+        border-width: .05rem;
+        border-color: #4B5260;
+    }
+
+    .right{
+        border-left: none;
+    }
+    
 }
 
 /* Phones */
@@ -332,9 +352,32 @@
 
     }
 
+    .resume-page{
+        width: fit-content;
+    }
+
+    .chess-year{
+        display: none;
+    }
+
+    .btn{
+        margin-top: 5px;
+        font-size: 10px !important;
+        padding: 5px 10px 5px 10px !important; 
+    }
+
     .name-heading {
         font-size: 24px;
         letter-spacing: 4px;
+    }
+
+    .line{
+        text-align: justify;
+    }
+
+    .section{
+        padding-left: 0%;
+        padding-right: 0%;
     }
 
     .Profile-pic {
@@ -372,4 +415,11 @@
     .university {
         font-size: 0.9rem;
     }
+
+    .extra-curricular{
+        border-bottom:solid;
+        border-width: .05rem;
+        border-color: #4B5260;
+    }
 }
+
