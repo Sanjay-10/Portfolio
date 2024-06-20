@@ -1,0 +1,375 @@
+.background{
+    background-color: #19202E;
+    color: aliceblue;
+    font-family: "Inter", sans-serif;
+
+}
+
+.title{
+    font-size: larger;  
+    font-weight: 900 ;
+    letter-spacing: .15rem;
+}
+
+.project-title{
+    font-size: large;
+    font-weight: bolder ;
+}
+
+.university{
+    color: white;
+    font-weight: 500;
+}
+
+.uni-space{
+    margin-top: 1rem;
+}
+
+.tech{
+    padding-left: 2rem;
+}
+
+.info{
+    padding-top: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.name-heading{
+    
+    color : rgb(255, 255, 255);
+    display :block;
+    font-size :35px;
+    font-weight :900;
+    font-style: normal;
+    height :43.1953px;
+    letter-spacing :8px;
+    line-height :43.2px;
+    text-align :center;
+    align-items: center;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    unicode-bidi :isolate;
+    padding-bottom: 2em;
+    
+}
+
+.bottom{
+    border-bottom:solid;
+    border-width: .05rem;
+    border-color: #4B5260;
+
+}
+
+.resume-body{
+    display: flex;
+    margin: auto;
+    width: 65%;
+    height: 90%;
+    border: 2em;
+}
+
+.bold{
+    font-weight: 600;
+    padding: 0.2rem 0;
+    margin-bottom: 0.5rem;
+    color: #c4cde0;
+}
+
+.links-bar{
+    position: relative;
+    margin:  20px;
+    word-spacing: 1rem;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+
+
+.tech-badge{
+ background-color: #1B2332 ;
+ font-size: small !important;
+ color: rgba(255,255,255,.8) !important;
+ padding: .5rem .65rem !important;
+ margin-bottom: .5rem !important;
+}
+
+.icon{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #A5B3CE;
+    background-color: #161D29;
+    align-content: center;
+}
+.icon:hover{
+    transition-duration:1.5s;
+    color: rgb(19, 251, 123);
+}
+
+.container
+{
+    margin-top: 3rem;
+}
+
+.btn {
+    word-spacing: 1px !important;
+    font-weight: 700 !important;
+    position: absolute ;
+    right: 0;
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-size: 20px;
+    background: #FE655C !important;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #d92e2e !important;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+
+.row .column{
+    text-align: left;
+}
+
+.row{
+    
+}
+
+.company{
+    font-size: 1rem !important;
+}
+
+.social{
+    padding: 0 10px ;
+    height: 30px;
+    width: 30px;
+}
+
+.edu .Certificates{
+    font-size: 5rem ;
+}
+
+.company-detail {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.chess{
+    display: flex;
+    justify-content: space-between;
+}
+
+.line{
+    padding: 0.3rem 0;
+}
+
+.list-inline{
+    list-style: none;
+}
+
+.section{
+    text-align: left;
+    margin: 0 2rem;
+}
+
+.section-l{
+    padding: .5rem 2rem;
+}
+
+.section-r{
+    padding: 0.5rem 0rem;
+}
+
+.right{
+
+    border-left: solid;
+    border-width: .05rem;
+    border-color: #4B5260;
+}
+
+.resume-page{
+    position: relative;
+    border-radius: .5em;
+    background-color: #1E2738;
+    margin: 15vh auto;
+    width: 71%;
+    padding-bottom: 4rem;
+    
+
+}
+
+.Profile-pic{
+    border-radius: 50%;
+    max-width: 160px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    top: -80px;
+    border: 8px solid #1e2738;
+}
+
+.heading{
+    display:flex;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.fa-icon-p{
+    font-size: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 31px;
+    height: 31px;
+    padding-left: .15rem;
+    color: #d7dde9;
+
+}
+
+.fa-icon{
+    font-size: 1rem !important;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    padding-left: .15rem;
+    background: rgba(0, 0, 0, .15);
+    font-size: 1.125rem;
+    color: #d7dde9;
+    
+    
+}
+
+.title{
+    margin: auto 1rem;
+    
+}
+
+.content{
+    color: #A5B3CE;   
+
+}
+
+.contact{
+    display: inline-flex;
+    position: relative;
+    margin: 0 50px;
+    align-items: center;
+}
+
+.fa-icon-i{
+    padding-right: 0.5rem;
+}
+
+.contact-div{
+    padding: 1em;
+    border-bottom: solid;
+    border-width: 0.1em;
+    border-top: solid;
+    border-width: 0.1em;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #A5B3CE; 
+    margin: 0 50px;
+}
+
+
+
+
+/* Tablets */
+@media (max-width: 850px) {
+    .resume-body {
+        width: 80%;
+        
+    }
+
+    .resume-page{
+       
+    }
+    .name-heading {
+        font-size: 28px;
+        letter-spacing: 6px;
+    }
+
+    .Profile-pic {
+        max-width: 120px;
+        margin-left: -60px;
+        top: -60px;
+    }
+
+    .contact-div {
+        margin: 0 20px;
+    }
+
+    .section {
+        margin: 0 1rem;
+    }
+
+    .heading {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Phones */
+@media (max-width: 599px) {
+    .resume-body {
+        width: 90%;
+
+    }
+
+    .name-heading {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    .Profile-pic {
+        max-width: 100px;
+        margin-left: -50px;
+        top: -50px;
+    }
+
+    .contact-div {
+        margin: 0 10px;
+    }
+
+    .section {
+        margin: 0 1rem;
+    }
+
+    .heading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: medium;
+        margin: 0.5rem;
+    }
+
+    .project-title {
+        font-size: medium;
+    }
+
+    .company {
+        font-size: 1rem !important;
+    }
+
+    .university {
+        font-size: 0.9rem;
+    }
+}
