@@ -2,6 +2,7 @@
     background-color: #19202E;
     color: aliceblue;
     font-family: "Inter", sans-serif;
+    padding: 0 200px;
 
 }
 
@@ -159,10 +160,6 @@
     text-align: left;
 }
 
-.row{
-    
-}
-
 .company{
     font-size: 1rem !important;
 }
@@ -190,6 +187,7 @@
 
 .line{
     padding: 0.3rem 0;
+    text-align: justify;
 }
 
 .list-inline{
@@ -216,11 +214,9 @@
     position: relative;
     border-radius: .5em;
     background-color: #1E2738;
-    margin: 15vh auto;
-    width: 71%;
+    margin: 100px auto;
+    width: fit-content;
     padding-bottom: 4rem;
-    
-
 }
 
 .Profile-pic{
