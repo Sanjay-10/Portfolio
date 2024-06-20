@@ -354,6 +354,10 @@
         width: 90%;
     }
 
+    .container{
+        margin-top: 10px;
+    }
+
     .links-bar{
         padding-right: 50px;
         align-items: center;
