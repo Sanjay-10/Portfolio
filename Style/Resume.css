@@ -434,5 +434,9 @@
         border-width: .05rem;
         border-color: #4B5260;
     }
+
+    .clg{
+        font-size: 15px !important;
+    }
 }
 
