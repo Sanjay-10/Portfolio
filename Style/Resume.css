@@ -354,6 +354,17 @@
         width: 90%;
     }
 
+    .links-bar{
+        padding-right: 50px;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .info{
+        padding-top: 60px;
+    }
+
     .resume-page{
         width: fit-content;
     }
