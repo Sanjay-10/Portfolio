@@ -301,6 +301,9 @@
 
 /* Tablets */
 @media (max-width: 991px) {
+    .background{
+        padding: 0 100px;
+    }
     .resume-body {
         width: 80%;
     }
@@ -343,9 +346,12 @@
 
 /* Phones */
 @media (max-width: 599px) {
+
+    .background{
+        padding: 0 ;
+    }
     .resume-body {
         width: 90%;
-
     }
 
     .resume-page{
