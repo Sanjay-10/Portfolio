@@ -258,7 +258,7 @@
     text-align: center;
     width: 40px;
     height: 40px;
-    padding-left: .15rem;
+    padding: 10px;
     background: rgba(0, 0, 0, .15);
     font-size: 1.125rem;
     color: #d7dde9;
