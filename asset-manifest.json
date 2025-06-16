@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sanjay-10/Portfolio.git/static/css/main.1cf5bfbd.css",
+    "main.js": "/Sanjay-10/Portfolio.git/static/js/main.2b4f6c1a.js",
+    "static/js/453.c25e849e.chunk.js": "/Sanjay-10/Portfolio.git/static/js/453.c25e849e.chunk.js",
+    "index.html": "/Sanjay-10/Portfolio.git/index.html",
+    "main.1cf5bfbd.css.map": "/Sanjay-10/Portfolio.git/static/css/main.1cf5bfbd.css.map",
+    "main.2b4f6c1a.js.map": "/Sanjay-10/Portfolio.git/static/js/main.2b4f6c1a.js.map",
+    "453.c25e849e.chunk.js.map": "/Sanjay-10/Portfolio.git/static/js/453.c25e849e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cf5bfbd.css",
+    "static/js/main.2b4f6c1a.js"
+  ]
+}
