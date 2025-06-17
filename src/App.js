@@ -1,8 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Phone, Github, Linkedin, ExternalLink, Code, Database, Cloud, Globe, Calendar, MapPin, Award, User, Briefcase, GraduationCap, FolderOpen } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  ChevronDown,
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
+  ExternalLink,
+  Code,
+  Database,
+  Cloud,
+  Globe,
+  Calendar,
+  MapPin,
+  Award,
+  User,
+  Briefcase,
+  GraduationCap,
+  FolderOpen,
+} from "lucide-react";
 
 const Portfolio = () => {
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState("hero");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -11,14 +29,24 @@ const Portfolio = () => {
     };
 
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = [
+        "hero",
+        "about",
+        "skills",
+        "projects",
+        "experience",
+        "contact",
+      ];
       const scrollPosition = window.scrollY + 200; // Offset for navbar
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             setActiveSection(section);
             break;
           }
@@ -34,77 +62,117 @@ const Portfolio = () => {
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('hashchange', handleHashChange);
-    
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("hashchange", handleHashChange);
+
     // Handle initial hash
     handleHashChange();
-    
+
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
 
   const skills = {
-    languages: ['Java', 'C++', 'Python', 'JavaScript', 'C#', 'TypeScript'],
-    frontend: ['React.js', 'HTML5', 'CSS', 'Redux', 'Material UI', 'Tailwind', 'Bootstrap'],
-    backend: ['Spring Boot', 'Node.js', 'Express.js', 'Django', '.NET', 'RESTful APIs'],
-    database: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
-    cloud: ['AWS EC2', 'AWS S3', 'AWS RDS', 'Docker', 'Jenkins'],
-    testing: ['Selenium', 'JUnit', 'Postman', 'JIRA']
+    languages: ["Java", "C++", "Python", "JavaScript", "C#", "TypeScript"],
+    frontend: [
+      "React.js",
+      "HTML5",
+      "CSS",
+      "Redux",
+      "Material UI",
+      "Tailwind",
+      "Bootstrap",
+    ],
+    backend: [
+      "Spring Boot",
+      "Node.js",
+      "Express.js",
+      "Django",
+      ".NET",
+      "RESTful APIs",
+    ],
+    database: ["MySQL", "PostgreSQL", "SQLite", "MongoDB"],
+    cloud: ["AWS EC2", "AWS S3", "AWS RDS", "Docker", "Jenkins"],
+    testing: ["Selenium", "JUnit", "Postman", "JIRA"],
   };
 
   const projects = [
     {
-      title: 'SkillMatch - AI Chrome Extension',
-      tech: ['React.js', 'Google Gemini', 'Node.js', 'Express.js', 'Redux Toolkit'],
-      description: 'AI-driven Chrome extension for resume analysis and job matching with 22+ international users and 70% engagement rate.',
-      highlights: ['Open-source with community contributions', 'Real-time job fit analysis', 'Auto-generated cover letters'],
-      date: 'Dec 2024',
-      links: { github: 'https://github.com/Sanjay-10/SkillMatch', demo: 'https://skill-match-dashboard.vercel.app/' }
+      title: "SkillMatch - AI Chrome Extension",
+      tech: [
+        "React.js",
+        "Google Gemini",
+        "Node.js",
+        "Express.js",
+        "Redux Toolkit",
+      ],
+      description:
+        "AI-driven Chrome extension for resume analysis and job matching with 22+ international users and 70% engagement rate.",
+      highlights: [
+        "Open-source with community contributions",
+        "Real-time job fit analysis",
+        "Auto-generated cover letters",
+      ],
+      date: "Dec 2024",
+      links: {
+        github: "https://github.com/Sanjay-10/SkillMatch",
+        demo: "https://skill-match-dashboard.vercel.app/",
+      },
     },
     {
-      title: 'FriendsVault - Social Media Platform',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'AWS S3', 'AWS EC2'],
-      description: 'Full-stack social platform with 99.9% uptime supporting 1,000+ concurrent users.',
-      highlights: ['AWS cloud integration', 'Material UI design', 'JWT authentication'],
-      date: 'Sep 2024',
-      links: { github: 'https://github.com/Sanjay-10/FriendsVault-A-Social_Media-App-AWS', demo: 'https://friendsvault.vercel.app/' }
+      title: "FriendsVault - Social Media Platform",
+      tech: ["React.js", "Node.js", "MongoDB", "AWS S3", "AWS EC2"],
+      description:
+        "Full-stack social platform with 99.9% uptime supporting 1,000+ concurrent users.",
+      highlights: [
+        "AWS cloud integration",
+        "Material UI design",
+        "JWT authentication",
+      ],
+      date: "Sep 2024",
+      links: {
+        github:
+          "https://github.com/Sanjay-10/FriendsVault-A-Social_Media-App-AWS",
+        demo: "https://friendsvault.vercel.app/",
+      },
     },
     {
-      title: 'Bank Management System',
-      tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Spring Security'],
-      description: 'Secure banking backend with JWT authentication and role-based access control.',
-      highlights: ['95% test coverage', 'RESTful APIs', 'ACID compliance'],
-      date: 'Jun 2024',
-      links: { github: 'https://github.com/Sanjay-10/Bank-Management-System' }
+      title: "Bank Management System",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Spring Security"],
+      description:
+        "Secure banking backend with JWT authentication and role-based access control.",
+      highlights: ["95% test coverage", "RESTful APIs", "ACID compliance"],
+      date: "Jun 2024",
+      links: { github: "https://github.com/Sanjay-10/Bank-Management-System" },
     },
     {
-      title: 'Sync-Sphere: Distributed File Storage',
-      tech: ['Django', 'Docker', 'MinIO', 'Nginx', 'Bootstrap'],
-      description: 'Distributed file storage system with active-active replication and 40% latency reduction.',
-      highlights: ['Load balancing', 'Zero downtime', 'Checksum verification'],
-      date: 'Mar 2025',
-      links: { github: 'https://github.com/Sanjay-10/sync-sphere' }
-    }
+      title: "Sync-Sphere: Distributed File Storage",
+      tech: ["Django", "Docker", "MinIO", "Nginx", "Bootstrap"],
+      description:
+        "Distributed file storage system with active-active replication and 40% latency reduction.",
+      highlights: ["Load balancing", "Zero downtime", "Checksum verification"],
+      date: "Mar 2025",
+      links: { github: "https://github.com/Sanjay-10/sync-sphere" },
+    },
   ];
 
   const certifications = [
-    'Creating Spring Boot Microservices',
-    'Learning Jira Software',
-    'Learning Bash Scripting',
-    'Introduction to Spark SQL and DataFrames',
-    'React: Creating and Hosting a FullStack Site',
-    'Selenium Essential Training'
+    "Creating Spring Boot Microservices",
+    "Learning Jira Software",
+    "Learning Bash Scripting",
+    "Introduction to Spark SQL and DataFrames",
+    "React: Creating and Hosting a FullStack Site",
+    "Selenium Essential Training",
   ];
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setActiveSection(sectionId);
       // Update URL hash without triggering page jump
       window.history.pushState(null, null, `#${sectionId}`);
@@ -115,12 +183,12 @@ const Portfolio = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 blue-900 to-slate-900 text-white overflow-x-hidden">
       {/* Animated background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div 
+        <div
           className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{
             left: mousePosition.x - 192,
             top: mousePosition.y - 192,
-            transition: 'all 0.3s ease-out'
+            transition: "all 0.3s ease-out",
           }}
         />
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-2xl animate-bounce" />
@@ -136,13 +204,13 @@ const Portfolio = () => {
             </div>
             <div className="hidden lg:flex space-x-6">
               {[
-                { name: 'Home', id: 'hero' },
-                { name: 'About', id: 'about' },
-                { name: 'Skills', id: 'skills' },
-                { name: 'Projects', id: 'projects' },
-                { name: 'Experience', id: 'experience' },
-                { name: 'Certifications', id: 'experience' },
-                { name: 'Contact', id: 'contact' }
+                { name: "Home", id: "hero" },
+                { name: "About", id: "about" },
+                { name: "Skills", id: "skills" },
+                { name: "Projects", id: "projects" },
+                { name: "Experience", id: "experience" },
+                { name: "Certifications", id: "experience" },
+                { name: "Contact", id: "contact" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -152,17 +220,21 @@ const Portfolio = () => {
                     scrollToSection(item.id);
                   }}
                   className={`hover:text-blue-400 transition-colors duration-300 relative group cursor-pointer text-sm ${
-                    activeSection === item.id ? 'text-blue-400' : ''
+                    activeSection === item.id ? "text-blue-400" : ""
                   }`}
                 >
                   {item.name}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-400 transition-all duration-300 ${
-                    activeSection === item.id ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`} />
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-blue-400 transition-all duration-300 ${
+                      activeSection === item.id
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </a>
               ))}
             </div>
-            
+
             {/* Mobile Menu Button */}
             <button className="lg:hidden p-2 text-white">
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
@@ -176,39 +248,60 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative pt-30">
+      <section
+        id="hero"
+        className="min-h-screen flex items-center justify-center relative pt-30"
+      >
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-black mb-6 pb-5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
               Sanjay Suthar
             </h1>
             <div className="text-2xl md:text-3xl mb-6 text-gray-300">
-              <span className="typing-animation">Full-Stack Software Developer
-</span>
+              <span className="typing-animation">
+                Full-Stack Software Developer
+              </span>
             </div>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Crafting scalable, secure, and innovative software solutions with modern technologies.
-              Specialized in React.js, Spring Boot, AWS, and cloud-native applications.
+              Crafting scalable, secure, and innovative software solutions with
+              modern technologies. Specialized in React.js, Spring Boot, AWS,
+              and cloud-native applications.
             </p>
           </div>
-          
+
           <div className="flex justify-center space-x-6 mb-12">
-            <a href="mailto:suthar73@uwindsor.ca" className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110">
+            <a
+              href="mailto:suthar73@uwindsor.ca"
+              className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+            >
               <Mail className="w-6 h-6" />
             </a>
-            <a href="tel:+15198181726" className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110">
+            <a
+              href="tel:+15198181726"
+              className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+            >
               <Phone className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/sanjays10" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110">
+            <a
+              href="https://linkedin.com/in/sanjays10"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+            >
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="https://github.com/Sanjay-10" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110">
+            <a
+              href="https://github.com/Sanjay-10"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+            >
               <Github className="w-6 h-6" />
             </a>
           </div>
 
-          <button 
-            onClick={() => scrollToSection('about')}
+          <button
+            onClick={() => scrollToSection("about")}
             className="animate-bounce text-white/60 hover:text-white transition-colors duration-300"
           >
             <ChevronDown className="w-8 h-8 mx-auto" />
@@ -233,9 +326,10 @@ const Portfolio = () => {
                 <h3 className="text-2xl font-semibold">Professional Summary</h3>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Motivated software developer with hands-on experience in full-stack development, 
-                cloud-native applications, and scalable system design. Passionate about building 
-                secure, user-centric software that makes a difference.
+                Motivated software developer with hands-on experience in
+                full-stack development, cloud-native applications, and scalable
+                system design. Passionate about building secure, user-centric
+                software that makes a difference.
               </p>
             </div>
 
@@ -246,13 +340,21 @@ const Portfolio = () => {
               </div>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-blue-400">Master of Applied Computing</h4>
-                  <p className="text-gray-300">University of Windsor | GPA: 87.5%</p>
+                  <h4 className="font-semibold text-blue-400">
+                    Master of Applied Computing
+                  </h4>
+                  <p className="text-gray-300">
+                    University of Windsor | GPA: 87.5%
+                  </p>
                   <p className="text-sm text-gray-400">May 2024 – Present</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-purple-400">Bachelor of Engineering - IT</h4>
-                  <p className="text-gray-300">University of Mumbai | CGPI: 8.34/10</p>
+                  <h4 className="font-semibold text-purple-400">
+                    Bachelor of Engineering - IT
+                  </h4>
+                  <p className="text-gray-300">
+                    University of Mumbai | CGPI: 8.34/10
+                  </p>
                   <p className="text-sm text-gray-400">Aug 2019 – May 2023</p>
                 </div>
               </div>
@@ -272,15 +374,32 @@ const Portfolio = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, skillList], index) => (
-              <div key={category} className="glass-card p-6 hover:bg-white/10 transition-all duration-300">
+              <div
+                key={category}
+                className="glass-card p-6 hover:bg-white/10 transition-all duration-300"
+              >
                 <div className="flex items-center mb-4">
-                  {category === 'languages' && <Code className="w-6 h-6 text-blue-400 mr-3" />}
-                  {category === 'frontend' && <Globe className="w-6 h-6 text-green-400 mr-3" />}
-                  {category === 'backend' && <Database className="w-6 h-6 text-purple-400 mr-3" />}
-                  {category === 'database' && <Database className="w-6 h-6 text-yellow-400 mr-3" />}
-                  {category === 'cloud' && <Cloud className="w-6 h-6 text-cyan-400 mr-3" />}
-                  {category === 'testing' && <Award className="w-6 h-6 text-pink-400 mr-3" />}
-                  <h3 className="text-xl font-semibold capitalize">{category.replace('_', ' ')}</h3>
+                  {category === "languages" && (
+                    <Code className="w-6 h-6 text-blue-400 mr-3" />
+                  )}
+                  {category === "frontend" && (
+                    <Globe className="w-6 h-6 text-green-400 mr-3" />
+                  )}
+                  {category === "backend" && (
+                    <Database className="w-6 h-6 text-purple-400 mr-3" />
+                  )}
+                  {category === "database" && (
+                    <Database className="w-6 h-6 text-yellow-400 mr-3" />
+                  )}
+                  {category === "cloud" && (
+                    <Cloud className="w-6 h-6 text-cyan-400 mr-3" />
+                  )}
+                  {category === "testing" && (
+                    <Award className="w-6 h-6 text-pink-400 mr-3" />
+                  )}
+                  <h3 className="text-xl font-semibold capitalize">
+                    {category.replace("_", " ")}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skillList.map((skill, skillIndex) => (
@@ -288,7 +407,7 @@ const Portfolio = () => {
                       key={skill}
                       className="px-3 py-1 bg-gradient-to-r from-white/10 to-white/5 rounded-full text-sm backdrop-blur-sm border border-white/10 hover:scale-105 transition-transform duration-200"
                       style={{
-                        animationDelay: `${index * 100 + skillIndex * 50}ms`
+                        animationDelay: `${index * 100 + skillIndex * 50}ms`,
                       }}
                     >
                       {skill}
@@ -313,22 +432,38 @@ const Portfolio = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div key={project.title} className="glass-card p-8 hover:bg-white/10 transition-all duration-500 group">
+              <div
+                key={project.title}
+                className="glass-card p-8 hover:bg-white/10 transition-all duration-500 group"
+              >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center">
-                    <FolderOpen className="w-6 h-6 text-blue-400 mr-3" />
+                  <div className="flex items-center gap-3">
+                    <div className="min-w-[1.5rem] min-h-[1.5rem] mr-4 flex items-center justify-center">
+                      <FolderOpen className="w-6 h-6 text-blue-400" />
+                    </div>
                     <h3 className="text-2xl font-bold group-hover:text-blue-400 transition-colors duration-300">
                       {project.title}
                     </h3>
                   </div>
+
                   <div className="flex space-x-2">
                     {project.links.github && (
-                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300">
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300"
+                      >
                         <Github className="w-4 h-4" />
                       </a>
                     )}
                     {project.links.demo && (
-                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300">
+                      <a
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300"
+                      >
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     )}
@@ -340,13 +475,20 @@ const Portfolio = () => {
                   <span className="text-gray-400 text-sm">{project.date}</span>
                 </div>
 
-                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
                 <div className="mb-4">
-                  <h4 className="font-semibold mb-2 text-blue-400">Key Highlights:</h4>
+                  <h4 className="font-semibold mb-2 text-blue-400">
+                    Key Highlights:
+                  </h4>
                   <ul className="space-y-1">
                     {project.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-center text-gray-300 text-sm">
+                      <li
+                        key={i}
+                        className="flex items-center text-gray-300 text-sm"
+                      >
                         <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2" />
                         {highlight}
                       </li>
@@ -392,33 +534,43 @@ const Portfolio = () => {
                 <div className="relative">
                   <div className="absolute -left-9 w-4 h-4 bg-orange-400 rounded-full" />
                   <div className="mb-4">
-                    <h4 className="text-xl font-semibold text-orange-400">Web Development Intern</h4>
-                    <p className="text-gray-300 font-medium">CodeClause, Mumbai, India</p>
-                    <p className="text-sm text-gray-400 mb-3">Apr 2023 – May 2023</p>
-                    
+                    <h4 className="text-xl font-semibold text-orange-400">
+                      Web Development Intern
+                    </h4>
+                    <p className="text-gray-300 font-medium">
+                      CodeClause, Mumbai, India
+                    </p>
+                    <p className="text-sm text-gray-400 mb-3">
+                      Apr 2023 – May 2023
+                    </p>
+
                     <div className="space-y-2">
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Collaborated with cross-functional IT team ensuring 99.9% high availability in production environments
+                          Collaborated with cross-functional IT team ensuring
+                          99.9% high availability in production environments
                         </p>
                       </div>
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Optimized SQL queries reducing execution time by 25% through database performance tuning
+                          Optimized SQL queries reducing execution time by 25%
+                          through database performance tuning
                         </p>
                       </div>
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Participated in Agile ceremonies contributing to 15% faster delivery time for key milestones
+                          Participated in Agile ceremonies contributing to 15%
+                          faster delivery time for key milestones
                         </p>
                       </div>
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Achieved 95% success rate in meeting tight deadlines in fast-paced environment
+                          Achieved 95% success rate in meeting tight deadlines
+                          in fast-paced environment
                         </p>
                       </div>
                     </div>
@@ -436,7 +588,10 @@ const Portfolio = () => {
 
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <div key={cert} className="flex items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-300">
+                  <div
+                    key={cert}
+                    className="flex items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-300"
+                  >
                     <div className="w-2 h-2 bg-green-400 rounded-full mr-4" />
                     <span className="text-gray-300">{cert}</span>
                   </div>
@@ -466,8 +621,9 @@ const Portfolio = () => {
 
           <div className="glass-card p-12 mb-12">
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Ready to build something amazing together? I'm always open to discussing new opportunities, 
-              innovative projects, and exciting collaborations.
+              Ready to build something amazing together? I'm always open to
+              discussing new opportunities, innovative projects, and exciting
+              collaborations.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -493,10 +649,20 @@ const Portfolio = () => {
             </div>
 
             <div className="flex justify-center space-x-6">
-              <a href="https://linkedin.com/in/sanjays10" target="_blank" rel="noopener noreferrer" className="p-4 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-all duration-300 hover:scale-110 group">
+              <a
+                href="https://linkedin.com/in/sanjays10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-blue-600/20 rounded-full hover:bg-blue-600/30 transition-all duration-300 hover:scale-110 group"
+              >
                 <Linkedin className="w-6 h-6 text-blue-400 group-hover:text-blue-300" />
               </a>
-              <a href="https://github.com/Sanjay-10" target="_blank" rel="noopener noreferrer" className="p-4 bg-gray-600/20 rounded-full hover:bg-gray-600/30 transition-all duration-300 hover:scale-110 group">
+              <a
+                href="https://github.com/Sanjay-10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-gray-600/20 rounded-full hover:bg-gray-600/30 transition-all duration-300 hover:scale-110 group"
+              >
                 <Github className="w-6 h-6 text-gray-400 group-hover:text-gray-300" />
               </a>
             </div>
@@ -515,20 +681,32 @@ const Portfolio = () => {
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 16px;
         }
-        
+
         .typing-animation {
-          border-right: 2px solid #60A5FA;
+          border-right: 2px solid #60a5fa;
           animation: typing 3s steps(40) infinite, blink 1s infinite;
         }
-        
+
         @keyframes typing {
-          0%, 50% { border-color: transparent; }
-          51%, 100% { border-color: #60A5FA; }
+          0%,
+          50% {
+            border-color: transparent;
+          }
+          51%,
+          100% {
+            border-color: #60a5fa;
+          }
         }
-        
+
         @keyframes blink {
-          0%, 50% { border-color: #60A5FA; }
-          51%, 100% { border-color: transparent; }
+          0%,
+          50% {
+            border-color: #60a5fa;
+          }
+          51%,
+          100% {
+            border-color: transparent;
+          }
         }
       `}</style>
     </div>
