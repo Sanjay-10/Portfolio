@@ -22,6 +22,7 @@ import {
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("hero");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -202,6 +203,8 @@ const Portfolio = () => {
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Sanjay Suthar
             </div>
+
+            {/* Desktop Menu */}
             <div className="hidden lg:flex space-x-6">
               {[
                 { name: "Home", id: "hero" },
@@ -209,7 +212,6 @@ const Portfolio = () => {
                 { name: "Skills", id: "skills" },
                 { name: "Projects", id: "projects" },
                 { name: "Experience", id: "experience" },
-                { name: "Certifications", id: "experience" },
                 { name: "Contact", id: "contact" },
               ].map((item) => (
                 <a
@@ -236,7 +238,11 @@ const Portfolio = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="lg:hidden p-2 text-white">
+            <button
+              className="lg:hidden p-2 text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
                 <div className="w-full h-0.5 bg-white"></div>
                 <div className="w-full h-0.5 bg-white"></div>
@@ -245,9 +251,38 @@ const Portfolio = () => {
             </button>
           </div>
         </div>
-      </nav>
 
-      {/* Hero Section */}
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden place-items-end top-10 right-0 h-full w-2/3 max-w-xs bg-slate-900/90 backdrop-blur-sm border-l border-white/10 z-40 animate-fadeInRight">
+            <div className="flex  flex-col px-6 py-4 space-y-4">
+              {[
+                { name: "Home", id: "hero" },
+                { name: "About", id: "about" },
+                { name: "Skills", id: "skills" },
+                { name: "Projects", id: "projects" },
+                { name: "Experience", id: "experience" },
+                { name: "Contact", id: "contact" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.id);
+                    setIsMobileMenuOpen(false); // Close menu after click
+                  }}
+                  className={`hover:text-blue-400 transition-colors duration-300 py-2 ${
+                    activeSection === item.id ? "text-blue-400" : ""
+                  }`}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
       <section
         id="hero"
         className="min-h-screen flex items-center justify-center relative pt-30"
