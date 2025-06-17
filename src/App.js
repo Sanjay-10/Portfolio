@@ -239,7 +239,7 @@ const Portfolio = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-white"
+              className="lg:hidden p-2  text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -254,7 +254,7 @@ const Portfolio = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden place-items-end top-10 right-0 h-full w-2/3 max-w-xs bg-slate-900/90 backdrop-blur-sm border-l border-white/10 z-40 animate-fadeInRight">
+          <div className="lg:hidden place-items-end top-10 text-center h-full w-2/3 max-w-xs bg-slate-900/90 backdrop-blur-sm border-l border-white/10 z-40 animate-fadeInRight">
             <div className="flex  flex-col px-6 py-4 space-y-4">
               {[
                 { name: "Home", id: "hero" },
