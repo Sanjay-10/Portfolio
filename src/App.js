@@ -655,7 +655,7 @@ const Portfolio = () => {
           </div>
 
           <div className="glass-card p-12 mb-12">
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8  leading-relaxed">
               Ready to build something amazing together? I'm always open to
               discussing new opportunities, innovative projects, and exciting
               collaborations.
@@ -663,7 +663,7 @@ const Portfolio = () => {
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <a href="mailto:suthar73@uwindsor.ca" className="group">
-                <div className="flex items-center justify-center p-6 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl border border-blue-500/30 hover:border-blue-400 transition-all duration-300 group-hover:scale-105">
+                <div className="flex items-center sm:justify-center p-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl border border-blue-500/30 hover:border-blue-400 transition-all duration-300 group-hover:scale-105">
                   <Mail className="w-6 h-6 text-blue-400 mr-3" />
                   <div className="text-left">
                     <div className="font-semibold text-blue-400">Email</div>
@@ -673,7 +673,7 @@ const Portfolio = () => {
               </a>
 
               <a href="tel:+15198181726" className="group">
-                <div className="flex items-center justify-center p-6 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl border border-green-500/30 hover:border-green-400 transition-all duration-300 group-hover:scale-105">
+                <div className="flex items-center sm:justify-center p-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl border border-green-500/30 hover:border-green-400 transition-all duration-300 group-hover:scale-105">
                   <Phone className="w-6 h-6 text-green-400 mr-3" />
                   <div className="text-left">
                     <div className="font-semibold text-green-400">Phone</div>
