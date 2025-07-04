@@ -78,30 +78,61 @@ const Portfolio = () => {
   }, []);
 
   const skills = {
-    languages: ["Java", "C++", "Python", "JavaScript", "C#", "TypeScript"],
-    frontend: [
-      "React.js",
-      "HTML5",
-      "CSS",
-      "Redux",
-      "Material UI",
-      "Tailwind",
-      "Bootstrap",
-    ],
-    backend: [
+    "Languages & Programming": ["Java", "Python", "JavaScript", "C#"],
+    "Frameworks & Libraries": [
       "Spring Boot",
-      "Node.js",
       "Express.js",
+      "React.js",
+      "Node.js",
+      "Redux Toolkit",
       "Django",
-      ".NET",
-      "RESTful APIs",
+      "Bootstrap",
+      "MUI",
     ],
-    database: ["MySQL", "PostgreSQL", "SQLite", "MongoDB"],
-    cloud: ["AWS EC2", "AWS S3", "AWS RDS", "Docker", "Jenkins"],
-    testing: ["Selenium", "JUnit", "Postman", "JIRA"],
+    "Tools & Technologies": [
+      "AWS (EC2, S3, RDS, ECS Fargate, CloudWatch)",
+      "Docker",
+      "JUnit",
+      "Selenium",
+      "Git",
+      "GitHub",
+      "CI/CD",
+      "Kafka",
+    ],
+    "Databases & Core Concepts": [
+      "MySQL",
+      "PostgreSQL",
+      "Redis",
+      "MongoDB",
+      "OOP",
+      "Shell Scripting",
+    ],
   };
 
   const projects = [
+    {
+      title: "Smart E-commerce Product Recommender",
+      tech: [
+        "Microservices",
+        "Spring Boot",
+        "React",
+        "Docker",
+        "Kafka",
+        "CI/CD",
+      ],
+      description:
+        "A scalable and secure e-commerce platform built using microservices architecture, featuring an AI-driven product recommendation engine for personalized user experiences.",
+      highlights: [
+        "Microservices architecture with Spring Boot & React",
+        "Real-time AI recommendations via Kafka events",
+        "JWT authentication & role-based authorization",
+        "Dockerized services deployed on AWS ECS Fargate",
+      ],
+      date: "June 2025",
+      links: {
+        github: "https://github.com/Sanjay-10/Smart-E-commerce-project",
+      },
+    },
     {
       title: "SkillMatch - AI Chrome Extension",
       tech: [
@@ -381,7 +412,7 @@ const Portfolio = () => {
                   <p className="text-gray-300">
                     University of Windsor | GPA: 87.5%
                   </p>
-                  <p className="text-sm text-gray-400">May 2024 – Present</p>
+                  <p className="text-sm text-gray-400">May 2024 – Aug 2025</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-400">
