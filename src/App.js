@@ -596,47 +596,128 @@ const Portfolio = () => {
                 <h3 className="text-2xl font-bold">Professional Experience</h3>
               </div>
 
-              <div className="border-l-2 border-orange-400/30 pl-6 ml-3">
+              <div className="border-l-2 border-orange-400/30 pl-6 ml-3 space-y-10">
+                {/* Experience 1 */}
                 <div className="relative">
                   <div className="absolute -left-9 w-4 h-4 bg-orange-400 rounded-full" />
                   <div className="mb-4">
                     <h4 className="text-xl font-semibold text-orange-400">
-                      Web Development Intern
+                      Software Engineer
+                      <span className="text-gray-400 font-normal text-base ml-2">| Java, Spring Boot, MERN, RESTful API, CI/CD</span>
                     </h4>
                     <p className="text-gray-300 font-medium">
-                      CodeClause, Mumbai, India
+                      Compozent, Mumbai, India
                     </p>
                     <p className="text-sm text-gray-400 mb-3">
-                      Apr 2023 – May 2023
+                      May 2023 – April 2024
                     </p>
-
                     <div className="space-y-2">
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Collaborated with cross-functional IT team ensuring
-                          99.9% high availability in production environments
+                          Developed scalable MERN stack apps (MongoDB, Express.js, React.js, Node.js), enhancing user engagement with real-time features and secure authentication.
                         </p>
                       </div>
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Optimized SQL queries reducing execution time by 25%
-                          through database performance tuning
+                          Engineered backend services with Java Spring Boot, optimizing API response times via REST endpoints and resilient microservices.
                         </p>
                       </div>
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Participated in Agile ceremonies contributing to 15%
-                          faster delivery time for key milestones
+                          Improved database reliability with schema optimizations and indexing, cutting query latency by 20% on key services.
                         </p>
                       </div>
                       <div className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3 mt-2" />
                         <p className="text-gray-300 text-sm">
-                          Achieved 95% success rate in meeting tight deadlines
-                          in fast-paced environment
+                          Collaborated with teams to integrate CI/CD pipelines (Git, GitHub Actions), ensuring 99.9% uptime in production.
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Led backend automation and monitoring, raising code quality and reducing bugs by 30% using JUnit and Postman.
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Partnered with frontend teams for smooth REST API integration, meeting sprint goals and scaling for 1,000+ users.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Experience 2 */}
+                <div className="relative">
+                  <div className="absolute -left-9 w-4 h-4 bg-orange-400 rounded-full" />
+                  <div className="mb-4">
+                    <h4 className="text-xl font-semibold text-orange-400">
+                      Software Engineer Intern
+                      <span className="text-gray-400 font-normal text-base ml-2">| Python, Performance Optimization, Machine Learning</span>
+                    </h4>
+                    <p className="text-gray-300 font-medium">
+                      Jaguar Land Rover, Windsor, Canada
+                    </p>
+                    <p className="text-sm text-gray-400 mb-3">
+                      May 2025 – Aug 2025
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Created Python automation scripts to benchmark GPU inference frameworks for optimal backend selection.
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Built performance profiling pipelines to analyze kernel execution and identify system bottlenecks.
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Developed structured test cases to evaluate deep learning workloads ensuring reproducibility.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Experience 3 */}
+                <div className="relative">
+                  <div className="absolute -left-9 w-4 h-4 bg-orange-400 rounded-full" />
+                  <div className="mb-4">
+                    <h4 className="text-xl font-semibold text-orange-400">
+                      Full Stack Developer Intern
+                      <span className="text-gray-400 font-normal text-base ml-2">| C#, Python, Unity, Power BI</span>
+                    </h4>
+                    <p className="text-gray-300 font-medium">
+                      University of Windsor, Windsor, Canada
+                    </p>
+                    <p className="text-sm text-gray-400 mb-3">
+                      Jan 2025 – April 2025
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Built a 3D Unity-based virtual campus with classroom entry, teleportation, and quiz mini-games.
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Integrated Google Maps Tile API and Python ETL pipelines for clickstream analytics.
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 mt-2" />
+                        <p className="text-gray-300 text-sm">
+                          Developed Power BI dashboards to visualize user engagement metrics for feature enhancements.
                         </p>
                       </div>
                     </div>
@@ -644,8 +725,6 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-
-            {/* Certifications */}
             <div className="glass-card p-8">
               <div className="flex items-center mb-6">
                 <Award className="w-6 h-6 text-green-400 mr-3" />
